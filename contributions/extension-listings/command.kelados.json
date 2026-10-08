@@ -6,7 +6,8 @@
   "category": "specialized-tools",
   "limitations": [
     "Coverage is limited to the speak and serve subcommands and the surrounding Guard policy.",
-    "The kelados voices subcommand is not matched; it is read-only and has no side effects."
+    "The kelados voices subcommand is not matched; it queries available voice IDs and Guard's default handling applies to it.",
+    "Version-pinned npx/bunx invocations (e.g. npx kelados@1.0.2 speak) are covered for versions 1.0.0–1.0.2; later releases require a source update."
   ],
   "documentationUrl": "https://github.com/LovekeshAnand/Kelados",
   "tags": [
@@ -18,11 +19,17 @@
   ],
   "contributors": [
     {
-      "githubId": "LovekeshAnand",
+      "githubId": 164208889,
       "githubLogin": "LovekeshAnand",
       "roles": [
         "author"
       ]
+    }
+  ],
+  "originalContributions": [
+    {
+      "kind": "pull-request",
+      "url": "https://github.com/hashgraph-online/hol-guard/pull/3749"
     }
   ],
   "upstream": {

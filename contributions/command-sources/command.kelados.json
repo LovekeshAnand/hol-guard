@@ -169,6 +169,18 @@
                     "speak"
                   ],
                   [
+                    "kelados@1.0.0",
+                    "speak"
+                  ],
+                  [
+                    "kelados@1.0.1",
+                    "speak"
+                  ],
+                  [
+                    "kelados@1.0.2",
+                    "speak"
+                  ],
+                  [
                     "kelados@latest",
                     "speak"
                   ]
@@ -273,14 +285,14 @@
           "Kelados local TTS server command"
         ],
         "default_mode": "review",
-        "description": "Identifies `kelados serve`, which starts a local HTTP server for TTS synthesis. Covers the installed bin and npx, bunx, npm exec, pnpm dlx and yarn dlx launches.",
+        "description": "Identifies `kelados serve`, which starts a local HTTP server for TTS synthesis. Covers the installed bin and npx, bunx, npm exec, pnpm dlx and yarn dlx launches. Options placed before the subcommand (e.g. kelados --host 0.0.0.0 serve) are also matched.",
         "family": null,
         "matcher": {
           "config": {},
           "matchers": [
             {
               "config": {
-                "allow_leading_options": false,
+                "allow_leading_options": true,
                 "executables": [
                   "kelados",
                   "kelados.cmd",
@@ -291,7 +303,11 @@
                 "interspersed_flags": [],
                 "interspersed_options_with_values": [],
                 "inverse_flag_pairs": [],
-                "leading_options_with_values": [],
+                "leading_options_with_values": [
+                  "--host",
+                  "--key",
+                  "--port"
+                ],
                 "options_with_values": [
                   "--host",
                   "--key",
@@ -335,6 +351,18 @@
                 "paths": [
                   [
                     "kelados",
+                    "serve"
+                  ],
+                  [
+                    "kelados@1.0.0",
+                    "serve"
+                  ],
+                  [
+                    "kelados@1.0.1",
+                    "serve"
+                  ],
+                  [
+                    "kelados@1.0.2",
                     "serve"
                   ],
                   [
