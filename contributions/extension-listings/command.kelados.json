@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "guard.extension-listing.v2",
+  "extensionId": "command.kelados",
+  "tagline": "HOL Guard coverage for Kelados CLI commands that synthesize audio or start a local TTS server.",
+  "summary": "Reviews kelados speak, which writes a WAV file to disk, and kelados serve, which starts a local HTTP server exposing TTS synthesis endpoints. The read-only kelados voices subcommand is not matched.",
+  "category": "specialized-tools",
+  "limitations": [
+    "Coverage is limited to the speak and serve subcommands and the surrounding Guard policy.",
+    "The kelados voices subcommand is not matched; it is read-only and has no side effects."
+  ],
+  "documentationUrl": "https://github.com/LovekeshAnand/Kelados",
+  "tags": [
+    "tts",
+    "text-to-speech",
+    "audio",
+    "cli",
+    "kokoro"
+  ],
+  "contributors": [
+    {
+      "githubId": "LovekeshAnand",
+      "githubLogin": "LovekeshAnand",
+      "roles": [
+        "author"
+      ]
+    }
+  ],
+  "upstream": {
+    "name": "Kelados",
+    "url": "https://github.com/LovekeshAnand/Kelados"
+  }
+}
