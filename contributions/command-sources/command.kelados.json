@@ -342,12 +342,19 @@
                   "-y"
                 ],
                 "interspersed_options_with_values": [
+                  "--host",
+                  "--key",
                   "--package",
+                  "--port",
                   "-p"
                 ],
                 "inverse_flag_pairs": [],
                 "leading_options_with_values": [],
-                "options_with_values": [],
+                "options_with_values": [
+                  "--host",
+                  "--key",
+                  "--port"
+                ],
                 "paths": [
                   [
                     "kelados",
@@ -394,12 +401,19 @@
                   "-y"
                 ],
                 "interspersed_options_with_values": [
+                  "--host",
+                  "--key",
                   "--package",
+                  "--port",
                   "-p"
                 ],
                 "inverse_flag_pairs": [],
                 "leading_options_with_values": [],
-                "options_with_values": [],
+                "options_with_values": [
+                  "--host",
+                  "--key",
+                  "--port"
+                ],
                 "paths": [
                   [
                     "exec",
@@ -430,10 +444,18 @@
                   "--yes",
                   "-y"
                 ],
-                "interspersed_options_with_values": [],
+                "interspersed_options_with_values": [
+                  "--host",
+                  "--key",
+                  "--port"
+                ],
                 "inverse_flag_pairs": [],
                 "leading_options_with_values": [],
-                "options_with_values": [],
+                "options_with_values": [
+                  "--host",
+                  "--key",
+                  "--port"
+                ],
                 "paths": [
                   [
                     "dlx",

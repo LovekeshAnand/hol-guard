@@ -36,7 +36,7 @@
               "default_enabled": true,
               "dependencies": [],
               "deprecated": false,
-              "description": "Identifies `kelados speak`, which synthesizes audio from inline text or a file (-f/--file) and writes a WAV file to the path given by -o/--output.",
+              "description": "Identifies `kelados speak`, which synthesizes audio from inline text or a file (-f/--file) and writes a WAV file to the path given by -o/--output. Covers the installed bin and npx, bunx, npm exec, pnpm dlx and yarn dlx launches of the kelados package.",
               "example_command": "kelados speak \"Hello world\" -v af_heart -o hello.wav",
               "family": null,
               "fixed_reason": null,
@@ -63,7 +63,7 @@
               "default_enabled": true,
               "dependencies": [],
               "deprecated": false,
-              "description": "Identifies `kelados serve`, which starts a local HTTP server exposing /v1/audio/speech and /v1/text-to-speech/:voice endpoints on the configured port (default 8880).",
+              "description": "Identifies `kelados serve`, which starts a local HTTP server exposing /v1/audio/speech and /v1/text-to-speech/:voice endpoints on the configured port (default 8880). The server accepts a bearer key for authentication. Covers the installed bin and npx, bunx, npm exec, pnpm dlx and yarn dlx launches of the kelados package.",
               "example_command": "kelados serve --port 8880 --key my-secret",
               "family": null,
               "fixed_reason": null,
@@ -104,7 +104,7 @@
                 "Kelados text-to-speech command"
               ],
               "default_mode": "review",
-              "description": "Identifies `kelados speak`, which synthesizes audio from inline text or a file and writes a WAV to the output path.",
+              "description": "Identifies `kelados speak`, which synthesizes audio from inline text or a file and writes a WAV to the output path. Covers the installed bin and npx, bunx, npm exec, pnpm dlx and yarn dlx launches.",
               "family": null,
               "matcher": {
                 "config": {},
@@ -290,7 +290,7 @@
                 "Kelados local TTS server command"
               ],
               "default_mode": "review",
-              "description": "Identifies `kelados serve`, which starts a local HTTP server for TTS synthesis. Options placed before the subcommand (e.g. kelados --host 0.0.0.0 serve) are also matched.",
+              "description": "Identifies `kelados serve`, which starts a local HTTP server for TTS synthesis. Covers the installed bin and npx, bunx, npm exec, pnpm dlx and yarn dlx launches. Options placed before the subcommand (e.g. kelados --host 0.0.0.0 serve) are also matched.",
               "family": null,
               "matcher": {
                 "config": {},
@@ -347,12 +347,19 @@
                         "-y"
                       ],
                       "interspersed_options_with_values": [
+                        "--host",
+                        "--key",
                         "--package",
+                        "--port",
                         "-p"
                       ],
                       "inverse_flag_pairs": [],
                       "leading_options_with_values": [],
-                      "options_with_values": [],
+                      "options_with_values": [
+                        "--host",
+                        "--key",
+                        "--port"
+                      ],
                       "paths": [
                         [
                           "kelados",
@@ -399,12 +406,19 @@
                         "-y"
                       ],
                       "interspersed_options_with_values": [
+                        "--host",
+                        "--key",
                         "--package",
+                        "--port",
                         "-p"
                       ],
                       "inverse_flag_pairs": [],
                       "leading_options_with_values": [],
-                      "options_with_values": [],
+                      "options_with_values": [
+                        "--host",
+                        "--key",
+                        "--port"
+                      ],
                       "paths": [
                         [
                           "exec",
@@ -435,10 +449,18 @@
                         "--yes",
                         "-y"
                       ],
-                      "interspersed_options_with_values": [],
+                      "interspersed_options_with_values": [
+                        "--host",
+                        "--key",
+                        "--port"
+                      ],
                       "inverse_flag_pairs": [],
                       "leading_options_with_values": [],
-                      "options_with_values": [],
+                      "options_with_values": [
+                        "--host",
+                        "--key",
+                        "--port"
+                      ],
                       "paths": [
                         [
                           "dlx",
@@ -777,6 +799,19 @@
         0
       ],
       "id": "serve-npx",
+      "rule_id": "command.kelados.serve"
+    },
+    {
+      "command": "npx kelados --host 0.0.0.0 serve",
+      "disabled_permissions": [],
+      "enabled_extensions": [
+        "command.kelados"
+      ],
+      "expected_action": "review",
+      "expected_effective_segments": [
+        0
+      ],
+      "id": "serve-npx-interspersed-host",
       "rule_id": "command.kelados.serve"
     },
     {
