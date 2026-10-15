@@ -519,6 +519,7 @@
           "command.cogext",
           "command.cs",
           "command.ctty",
+          "command.dataman",
           "command.digline",
           "command.dispat",
           "command.errand",
