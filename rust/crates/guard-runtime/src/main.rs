@@ -420,6 +420,7 @@ mod local_once_store;
 mod local_store_read;
 mod local_tool_eligibility_op;
 mod managed_controls_policy_fields;
+mod managed_policy;
 mod managed_resident;
 mod mcp_probe_op;
 mod mcp_proxy_actions;
@@ -622,6 +623,7 @@ mod strict_json;
 #[cfg(test)]
 mod supply_chain_cloud_vectors_tests;
 mod supply_chain_egress;
+mod supply_chain_eval_rounds;
 mod supply_chain_eval_seams;
 mod totp;
 #[cfg(windows)]
