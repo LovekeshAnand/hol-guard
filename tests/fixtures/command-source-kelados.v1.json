@@ -536,6 +536,7 @@
           "command.librarybridge",
           "command.macscope",
           "command.mcp-agenthub",
+          "command.mcp-architecture-intelligence-platform",
           "command.mcp-asdecided",
           "command.mcp-authyouragent",
           "command.mcp-clipugc",
